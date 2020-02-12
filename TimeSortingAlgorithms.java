@@ -91,7 +91,8 @@ public class TimeSortingAlgorithms{
     	mapping.put(6, "Selection Sort");
     	
         // String path = "M:/ADS/Files/";  /** Change Path Here */
-	String path = System.getProperty("user.dir")+"/Files/"; /** If this gives "(Access denied)", comment this and use hardcoded path above. */
+		/** If this gives "(Access denied)", comment the line below and use hardcoded path above. */
+		String path = System.getProperty("user.dir")+"/Files/";
         File folder = new File(path);
         File[] listOfFiles = folder.listFiles();
         
