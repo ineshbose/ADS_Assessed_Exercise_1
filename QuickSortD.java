@@ -33,11 +33,9 @@ public class QuickSortD {
 		if(r<=p) {
 			return;
 		}
-		int[] pivots = Partition(A, p, r);
-		int small = pivots[0];
-		int high = pivots[1];
-		Sort(A, p, small - 1);
-		Sort(A, high + 1, r);
+		int[] q = Partition(A, p, r);
+		Sort(A, p, q[0] - 1);
+		Sort(A, q[1] + 1, r);
 	}
 	
 }
