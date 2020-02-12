@@ -90,8 +90,8 @@ public class TimeSortingAlgorithms{
     	mapping.put(5, "Merge Sort");
     	mapping.put(6, "Selection Sort");
     	
-    	/** Change Path Here */
-        String path = "M:/ADS/Files/";     
+        // String path = "M:/ADS/Files/";  /** Change Path Here */
+	String path = System.getProperty("user.dir")+"/Files/"; /** If this gives "(Access denied)", comment this and use hardcoded path above. */
         File folder = new File(path);
         File[] listOfFiles = folder.listFiles();
         
@@ -114,7 +114,7 @@ public class TimeSortingAlgorithms{
             	}
             }
 
-            System.out.println("\n=============== " + file.toString().toUpperCase() + " ===============\n");
+            System.out.println("\n=============== " + file.getName().toUpperCase() + " ===============\n");
        
             /** Calling Sorting Techniques */
             for(int i=0;i<arr.length;i++) {
