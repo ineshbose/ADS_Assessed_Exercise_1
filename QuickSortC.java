@@ -17,40 +17,28 @@ public class QuickSortC {
 		if (A[q] < A[p]) {
 			Swap(A, p, q);
 		}
-		Swap(A, q, p);
+		//Swap(A, q, p);
 	}
 	
 	private static int Partition(int[] A, int p, int r) {
-		int pos = A[p];
-		int i = p;
-		int j = r + 1;
-		while (true) {
-			while (A[++i] < pos) {
-				if (i == r) {
-					break;
-				}
+		int x = A[r];
+		int i = p-1;
+		for(int j=p; j<r;j++) {
+			if(A[j] <= x) {
+				i = i+1;
+				Swap(A,i,j);
 			}
-			while (A[--j] > pos) {
-				if (j == p) {
-					break;
-				}
-			}
-
-			if (i >= j) {
-				break;
-			}
-			Swap(A, i, j);
 		}
-		Swap(A, p, j);
-		return j;
+		Swap(A,i+1,r);
+		return i+1;
 	}
 	
 	public static void Sort(int[] A, int p, int r) {
 		if(p<r) {
 			Median(A, p, r);
 			int q = Partition(A, p, r);
-			Sort(A, p, q - 1);
-			Sort(A, q + 1, r);
+			Sort(A, p, q-1);
+			Sort(A, q+1, r);
 		}
 	}
 	

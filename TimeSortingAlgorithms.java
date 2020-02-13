@@ -9,25 +9,13 @@ public class TimeSortingAlgorithms{
 	private static HashMap<Integer, String> mapping = new HashMap<Integer, String>();
 	
 	
-	/**
-	 * To calculate time taken by a sorting technique. Avoids having to use another variable.
-	 * 
-	 * @param t1 Time before sort
-	 * @param t2 Time after sort
-	 * @return time difference
-	 */
-	private static long TimeDifference(long t1, long t2) {
-		return t2-t1;
-	}
-	
-	
     /**
      * Verifies that sorting technique worked
      * 
      * @param A Array to verify
      * @return boolean value if array is sorted
      */
-    private static boolean TestSortingAlgorithms(int[] A){
+    public static boolean TestSortingAlgorithms(int[] A){
         for(int i=1; i<A.length; i++){
             if(A[i]<A[i-1]){
                 return false;
@@ -67,7 +55,7 @@ public class TimeSortingAlgorithms{
 			time2 = System.currentTimeMillis();
 			
 			if(TestSortingAlgorithms(arr[i-1])) {
-        		System.out.println(mapping.get(1) + QuickSortB.cutoff + ": " + TimeDifference(time1, time2) + " milliseconds");
+        		System.out.println(mapping.get(1) + QuickSortB.cutoff + ": " + (time2-time1) + " milliseconds");
         	}
         	else {
         		System.out.println(mapping.get(1) + QuickSortB.cutoff + " failed.");
@@ -142,7 +130,7 @@ public class TimeSortingAlgorithms{
             			time2 = System.currentTimeMillis();
             	}
             	if(TestSortingAlgorithms(arr[i]) && i!=1) {
-            		System.out.println(mapping.get(i) + ": " + TimeDifference(time1, time2) + " milliseconds");
+            		System.out.println(mapping.get(i) + ": " + (time2-time1) + " milliseconds");
             	}
             	else if(i==1) {
             		continue;
