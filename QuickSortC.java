@@ -17,7 +17,6 @@ public class QuickSortC {
 		if (A[q] < A[p]) {
 			Swap(A, p, q);
 		}
-		//Swap(A, q, p);
 	}
 	
 	private static int Partition(int[] A, int p, int r) {

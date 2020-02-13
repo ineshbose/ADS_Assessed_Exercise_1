@@ -1,4 +1,3 @@
-
 public class OtherSorts {
 	
     public static void InsertionSort(int[] A){
@@ -61,6 +60,5 @@ public class OtherSorts {
     		Merge(A, p, q, r);
     	}
     }
-
 
 }
