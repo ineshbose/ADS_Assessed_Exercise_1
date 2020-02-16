@@ -7,15 +7,14 @@ public class QuickSortC {
 	}
 	
 	private static void Median(int[] A, int p, int r) {
-		int q = p + (r - p) / 2;
-		if (A[p] > A[r]) {
-			Swap(A, p, r);
-		}
-		if (A[q] > A[r]) {
-			Swap(A, q, r);
-		}
-		if (A[q] < A[p]) {
-			Swap(A, p, q);
+		int q = (p+r) / 2;
+		int[] arr = { A[p], A[q], A[r] };
+		OtherSorts.MergeSort(arr, 0, arr.length-1);
+		for(int i=p; i<r; i++){
+			if(A[i]==arr[1]){
+				Swap(A, i, r);
+				break;
+			}
 		}
 	}
 	
