@@ -87,7 +87,6 @@ public class TimeSortingAlgorithms{
         /** Loading into ArrayList */
         for (File file : listOfFiles) {
         	
-            @SuppressWarnings("resource")
 			Scanner s = new Scanner(new File(file.toString()));
             ArrayList<Integer> list = new ArrayList<Integer>();
             while(s.hasNext()){
