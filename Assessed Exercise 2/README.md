@@ -35,3 +35,4 @@ Explain the implementation in the report, noting the running time of each operat
 This exercise counts for 10% of the total assessment mark for the course. It is worth a total of 30 points.
 Part 1 has four parts for 9, 9, 2 and 5 marks respectively. Part 2 has three parts for 3, 1 and 1 respectively.
 The grading follows the University's system for late submission. <br />
+**Grade:** A1 (10%)
